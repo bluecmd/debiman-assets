@@ -7,7 +7,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ .Title }} — debiman</title>
+<link rel="stylesheet" href="https://speedtest.kamel.network/style.css">
+<title>{{ .Title }} — manpages - Kamel Networks</title>
 <style type="text/css">
 {{ template "style" }}
 </style>
@@ -19,28 +20,11 @@
 {{ end -}}
 </head>
 <body>
-<div id="header">
-   <div id="upperheader">
-  <h1><a href="{{ BaseURLPath }}/">some debiman installation</a></h1>
-  <div id="searchbox">
-    <form action="{{ BaseURLPath }}/jump" method="get">
-      {{ if .Meta -}}
-      <input type="hidden" name="suite" value="{{ .Meta.Package.Suite }}">
-      <input type="hidden" name="binarypkg" value="{{ .Meta.Package.Binarypkg }}">
-      <input type="hidden" name="section" value="{{ .Meta.Section }}">
-      <input type="hidden" name="language" value="{{ .Meta.Language }}">
-      {{ end -}}
-      <input type="text" name="q" placeholder="manpage name" required>
-      <input type="submit" value="Jump">
-    </form>
-  </div>
- </div>
-<div id="navbar">
-<p class="hidecss"><a href="#content">Skip Quicknav</a></p>
-<ul>
-   <li><a href="{{ BaseURLPath }}/">Index</a></li>
-</ul>
-</div>
+<header>
+	<div class="container">
+		<a id="a-title" href="/">
+		<h1>manpages</h1>
+		</a>
    <p id="breadcrumbs">&nbsp;
      {{- range $i, $b := .Breadcrumbs }}
      {{ if eq $b.Link "" }}
@@ -50,5 +34,20 @@
      {{ end }}
      {{ end -}}
    </p>
+
+	</div>
+	<div id="searchbox">
+		<form action="{{ BaseURLPath }}/jump" method="get">
+		{{ if .Meta -}}
+		<input type="hidden" name="suite" value="{{ .Meta.Package.Suite }}">
+		<input type="hidden" name="binarypkg" value="{{ .Meta.Package.Binarypkg }}">
+		<input type="hidden" name="section" value="{{ .Meta.Section }}">
+		<input type="hidden" name="language" value="{{ .Meta.Language }}">
+		{{ end -}}
+		<input type="text" name="q" placeholder="manpage name" required>
+		<input type="submit" value="Jump">
+		</form>
+	</div>
+</header>
 </div>
 <div id="content">

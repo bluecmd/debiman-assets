@@ -1,3 +1,6 @@
+.container {
+	max-width: 100%;
+}
 @font-face {
   font-family: 'Inconsolata';
   src: local('Inconsolata'), url({{ BaseURLPath }}/Inconsolata.woff2) format('woff2'), url({{ BaseURLPath }}/Inconsolata.woff) format('woff');
@@ -16,21 +19,6 @@
   font-weight: 700;
   /* TODO: is local('Roboto Bold') really correct? */
   src: local('Roboto Bold'), local('Roboto-Bold'), url({{ BaseURLPath }}/Roboto-Bold.woff2) format('woff2'), url({{ BaseURLPath }}/Roboto-Bold.woff) format('woff');
-}
-
-body {
-	color: #000;
-	background-color: white;
-	font-family: 'Roboto', sans-serif;
-	font-size: 100%;
-	line-height: 1.2;
-	letter-spacing: 0.15px;
-	margin: 0;
-	padding: 0;
-}
-
-#header {
-	padding: 0 10px 0 52px;
 }
 
 #logo {
@@ -92,8 +80,8 @@ p.section a {
 	margin: 0 10px 0 0.5em;
 	padding: 1px 0 1px 0;
 	position: absolute;
-	top: 0;
-	right: 0;
+	top: 2em;
+	right: 2em;
 	font-size: .75em;
 }
 
@@ -110,7 +98,6 @@ p.section a {
 
 #navbar a {
 	display: block;
-	color: #0035c7;
 	text-decoration: none;
 	border-left: 1px solid transparent;
 	border-right: 1px solid transparent;
@@ -121,21 +108,12 @@ p.section a {
 	text-decoration: underline;
 }
 
-a:link {
-	color: #0035c7;
-}
-
-a:visited {
-	color: #54638c;
-}
-
 #breadcrumbs {
 	line-height: 2;
 	min-height: 20px;
 	margin: 0;
 	padding: 0;
 	font-size: 0.75em;
-	border-bottom: 1px solid #d2d3d7;
 }
 
 #breadcrumbs:before {
@@ -151,7 +129,7 @@ a:visited {
 }
 
 .paneljump {
-    background-color: #d70751;
+    background-color: #151515;
     padding: 0.5em;
     border-radius: 3px;
     margin-right: .5em;
@@ -187,11 +165,7 @@ a:visited {
 }
 
 #footer {
-	border: 1px solid #dfdfe0;
-	border-left: 0;
-	border-right: 0;
-	background-color: #f5f6f7;
-	padding: 1em;
+	color: gray;
 	margin: 1em 10px 0 52px;
 	font-size: 0.75em;
 	line-height: 1.5em;
@@ -214,7 +188,6 @@ hr {
 /* from tracker.debian.org */
 
 a, a:hover, a:focus, a:visited {
-    color: #0530D7;
     text-decoration: none;
 }
 
@@ -222,8 +195,8 @@ a, a:hover, a:focus, a:visited {
 .panel {
   padding: 15px;
   margin-bottom: 20px;
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
+  background-color: #151515;
+  border: 1px solid #b5e853;
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -231,17 +204,14 @@ a, a:hover, a:focus, a:visited {
 
 .panel-heading, .panel details {
   margin: -15px -15px 0px;
-  background-color: #d70751;
-  border-bottom: 1px solid #dddddd;
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
+  background-color: #151515;
 }
 
 .panel-heading, .panel summary {
   padding: 5px 5px;
   font-size: 17.5px;
   font-weight: 500;
-  color: #ffffff;
+  color: #b5e853;
   outline-style: none;
 }
 
@@ -261,9 +231,6 @@ summary, details {
   padding: 5px 5px;
   margin: 15px -15px -15px;
   background-color: #f5f5f5;
-  border-top: 1px solid #dddddd;
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
 }
 .panel-info {
   border-color: #bce8f1;
@@ -279,7 +246,7 @@ summary, details {
 .list-group {
   padding-left: 0;
   margin-bottom: 20px;
-  background-color: #ffffff;
+  background-color: #151515;
 }
 
 .list-group-item {
@@ -287,7 +254,6 @@ summary, details {
   display: block;
   padding: 5px 5px 5px 5px;
   margin-bottom: -1px;
-  border: 1px solid #dddddd;
 }
 
 .list-group-item > .list-item-key {
@@ -337,7 +303,7 @@ summary, details {
 }
 
 .list-group-item:hover {
-  background-color: #efefef;
+  background-color: #252525;
 }
 
 .list-group-item.active a {
@@ -345,7 +311,7 @@ summary, details {
 }
 
 .list-group-item.active {
-  background-color: #efefef;
+  background-color: #252525;
 }
 
 .list-group-flush {
@@ -373,7 +339,6 @@ summary, details {
 .panel {
 float: right;
 clear: right;
-font-family: 'Roboto';
 min-width: 200px;
 }
 
